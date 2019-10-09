@@ -1,4 +1,5 @@
 <% @projects.each do |project| %>
+  <%= link_to "詳細", "/projects/#{project.id}", method: :get %>
   <p><%= project.title %></p>
   <p><%= project.state %></p>
   <p><%= project.limit_date %></p>
