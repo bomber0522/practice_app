@@ -1,0 +1,12 @@
+<div>新規プロジェクト</div>
+<%= form_for(@project) do |f| %>
+  <div><%= f.label :title %>
+  <div><%= f.text_field :title %></div>
+  <div><%= f.label :state %></div>
+  <div><%= f.text_field :state %></div>
+  <div><%= f.label :limit_date %></div>
+  <div><%= f.datetime_select :limit_date,
+              start_year: 2000, end_year: Time.current.year + 1,
+              use_month_numbers: true %></div>
+  <div><%= f.submit %></div>
+<% end %>
