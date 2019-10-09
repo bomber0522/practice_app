@@ -17,7 +17,8 @@ ActiveRecord::Schema.define(version: 2019_10_08_111214) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "state"
-    t.date "limit_date"
+    t.datetime "released_at", null: false
+    t.datetime "expired_at"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

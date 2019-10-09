@@ -1,7 +1,11 @@
 class ProjectsController < ApplicationController
 
   def index
-    @projects = Project.order('limit_date').all
+    @projects = Project.order('released_at').all
+  end
+
+  def new
+    @project = Project.new
   end
 
   def show
